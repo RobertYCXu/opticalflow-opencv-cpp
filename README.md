@@ -6,7 +6,7 @@ Keep in mind that these images are very large in order to accomodate the full mo
 will need to be downloaded for optimal viewing.
 
 # Resources
-[videos used for analysis](https://drive.google.com/open?id=1tGOOCLuhptdMx-McrgoeJ6zHkUeBpKsj)
+Here are the [videos used for analysis](https://drive.google.com/open?id=1tGOOCLuhptdMx-McrgoeJ6zHkUeBpKsj)
 
 Xcode was used to develop with OpenCV. [Here's](https://www.youtube.com/watch?v=o62iO8SssZk) a helpful video detailing how to set this up.
 
