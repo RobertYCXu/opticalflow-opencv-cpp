@@ -24,7 +24,7 @@ Mat Flow::denseFlow(std::string videoFile, Config config) {
         bool grabbed = cap.grab();
         
         if (!grabbed) {
-            cout << "Frame grab failed" << endl;
+            cerr << "Frame grab failed" << endl;
             break;
         }
         
@@ -43,7 +43,6 @@ Mat Flow::denseFlow(std::string videoFile, Config config) {
             for (int y = 0; y < original.rows; y += 200) {
                 for (int x = 0; x < original.cols; x += 200) {
                     const Point2f flowatxy = flow.at<Point2f>(y, x) * 100;
-                    cout << flowatxy << endl;
                     avgY -= flowatxy.y;
                     avgX -= flowatxy.x;
                     numPoints++;
@@ -61,8 +60,7 @@ Mat Flow::denseFlow(std::string videoFile, Config config) {
         }
         img.copyTo(prevGray);
         numFrames++;
-//        cout << "Frame " << numFrames << endl;
-        
+
     }
     return generateOutput(points);
 }
@@ -75,8 +73,7 @@ Mat Flow::generateOutput(vector<Point> points) {
         int p2 = 1;
         
         while (p2 != points.size()) {
-            cout << points.at(p1) << endl;
-            
+
             line(output, Point(points.at(p1).x + 5000, points.at(p1).y + 5000), Point(points.at(p2).x + 5000, points.at(p2).y + 5000), Scalar(255), 1, 8, 0);
             p1++;
             p2++;
@@ -101,7 +98,7 @@ Mat Flow::sparseFlow(std::string videoFile, Config config) {
         bool grabbed = cap.grab();
         
         if (!grabbed) {
-            cout << "Frame grab failed" << endl;
+            cerr << "Frame grab failed" << endl;
             break;
         }
         
@@ -141,7 +138,6 @@ Mat Flow::sparseFlow(std::string videoFile, Config config) {
             yAvg2 /= prevFeatures.size();
             double pointX = xAvg1 - xAvg2;
             double pointY = yAvg1 - yAvg2;
-//            cout << pointX << " " << pointY << endl;
             if (points.empty()) {
                 points.emplace_back(Point{cvRound(pointX), cvRound(pointY)});
             }
@@ -154,8 +150,7 @@ Mat Flow::sparseFlow(std::string videoFile, Config config) {
         }
         img.copyTo(prevGray);
         numFrames++;
-//        cout << "Frame " << numFrames << endl;
-        
+
     }
     return generateOutput(points);
 }
