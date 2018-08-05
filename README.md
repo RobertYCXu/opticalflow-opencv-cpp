@@ -10,8 +10,8 @@ will need to be downloaded for optimal viewing.
 
 Sample trace path and corresponding result:
 
-<img src="img/trace-path.jpg" width="200">
-<img src="img/trace-path-result.png" width="200">
+<img src="img/trace-path.jpg" width="600">
+<img src="img/trace-path-result.png" width="600">
 
 # Resources
 Here are the [videos used for analysis](https://drive.google.com/open?id=1tGOOCLuhptdMx-McrgoeJ6zHkUeBpKsj)
