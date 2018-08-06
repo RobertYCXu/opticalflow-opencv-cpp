@@ -21,8 +21,8 @@ namespace NumConst {
 }
 
 namespace StringConst {
-    const std::string VIDEO_INPUT_DIR = "/Users/robert/OneDrive - University of Waterloo/research/vogel/opencv-optical-flow-cpp/opencv-optical-flow-cpp/opencv-optical-flow-cpp/videos/";
-    const std::string OUTPUT_DIR = "/Users/robert/OneDrive - University of Waterloo/research/vogel/opencv-optical-flow-cpp/opencv-optical-flow-cpp/opencv-optical-flow-cpp/flowimages/";
+    const std::string VIDEO_INPUT_DIR = "video_input_directory/";
+    const std::string OUTPUT_DIR = ".../flowimages/";
     const std::string VERY_FAST = "vfast";
     const std::string FAST = "fast";
     const std::string MEDIUM = "med";
